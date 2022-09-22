@@ -1,5 +1,4 @@
-# convert.py
-#
+# helpme plz
 # User inputs speed in mph
 # Program outputs speed in kph, ft/s, m/s depending on user choice.
 #
@@ -7,6 +6,8 @@
 #   mph -> kph
 #   mph -> ft/s
 #   mph -> m/s
+
+
 
 def mph_to_kph(mph):
     return 1.609*mph
@@ -20,8 +21,22 @@ def mph_to_fts(mph):
 mph = input("Input speed in mph: ")
 mph = float(mph)
 
-print("Speed in kph is", mph_to_kph(mph))
+print("please choose between these three options:")
+print("1. Kilometers per Hour")
+print("2. Meters per Second")
+print("3. Feet per Second")
+menuInput = input()
+menuInput = float(menuInput)
 
-print("Speed in m/s is", mph_to_ms(mph))
+if menuInput < 1 or menuInput > 3 :
+    print("please try again")
 
-print("Speed in ft/s is", mph_to_fts(mph))
+if menuInput == 1 :
+    print("Speed in kph is", mph_to_kph(mph))
+
+if menuInput == 2 :
+    print("Speed in m/s is", mph_to_ms(mph))
+
+if menuInput == 3 :
+    print("Speed in ft/s is", mph_to_fts(mph))
+
